@@ -23,8 +23,8 @@
   <datasources>
     <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
       <aliases enabled='yes' />
-      <column caption='M1-9' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;M2&quot;'>
-        <calculation class='tableau' formula='&quot;M2&quot;' />
+      <column caption='M1-9' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;M9&quot;'>
+        <calculation class='tableau' formula='&quot;M9&quot;' />
         <members>
           <member value='&quot;M1&quot;' />
           <member value='&quot;M2&quot;' />
@@ -43,8 +43,8 @@
           <member value='&quot;Card6&quot;' />
         </members>
       </column>
-      <column caption='Card1-3&amp;5' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Card5&quot;'>
-        <calculation class='tableau' formula='&quot;Card5&quot;' />
+      <column caption='Card1-3&amp;5' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Card1&quot;'>
+        <calculation class='tableau' formula='&quot;Card1&quot;' />
         <members>
           <member value='&quot;Card1&quot;' />
           <member value='&quot;Card2&quot;' />
@@ -52,15 +52,15 @@
           <member value='&quot;Card5&quot;' />
         </members>
       </column>
-      <column caption='Addr' datatype='string' name='[Parameter 4]' param-domain-type='list' role='measure' type='nominal' value='&quot;Addr2&quot;'>
-        <calculation class='tableau' formula='&quot;Addr2&quot;' />
+      <column caption='Addr' datatype='string' name='[Parameter 4]' param-domain-type='list' role='measure' type='nominal' value='&quot;Addr1&quot;'>
+        <calculation class='tableau' formula='&quot;Addr1&quot;' />
         <members>
           <member value='&quot;Addr1&quot;' />
           <member value='&quot;Addr2&quot;' />
         </members>
       </column>
-      <column caption='C1-14' datatype='string' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;C1&quot;'>
-        <calculation class='tableau' formula='&quot;C1&quot;' />
+      <column caption='C1-14' datatype='string' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;C13&quot;'>
+        <calculation class='tableau' formula='&quot;C13&quot;' />
         <members>
           <member value='&quot;C1&quot;' />
           <member value='&quot;C2&quot;' />
@@ -77,8 +77,8 @@
           <member value='&quot;C13&quot;' />
         </members>
       </column>
-      <column caption='D1-15' datatype='string' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;D2&quot;'>
-        <calculation class='tableau' formula='&quot;D2&quot;' />
+      <column caption='D1-15' datatype='string' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;D15&quot;'>
+        <calculation class='tableau' formula='&quot;D15&quot;' />
         <members>
           <member value='&quot;D1&quot;' />
           <member value='&quot;D2&quot;' />
@@ -6556,6 +6556,9 @@
       <column-instance column='[TransactionID]' derivation='Count' name='[pcto:cnt:TransactionID:qk:4]' pivot='key' type='quantitative'>
         <table-calc ordering-field='[federated.0vblg1004tss1s1e053n61qq9ny4].[isFraud]' ordering-type='Field' type='PctTotal' />
       </column-instance>
+      <column-instance column='[TransactionID]' derivation='Count' name='[pcto:cnt:TransactionID:qk:6]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Table' type='PctTotal' />
+      </column-instance>
       <column-instance column='[card3]' derivation='Count' name='[pcto:cnt:card3:qk:2]' pivot='key' type='quantitative'>
         <table-calc ordering-field='[federated.0vblg1004tss1s1e053n61qq9ny4].[isFraud]' ordering-type='Field' type='PctTotal' />
       </column-instance>
@@ -6617,7 +6620,7 @@
           <groupfilter function='level-members' level='[none:TransactionAmt:qk]' />
         </groupfilter>
       </group>
-      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' _.fcp.SchemaViewerObjectModel.true...common-percentage='0.763326' _.fcp.SchemaViewerObjectModel.true...user-set-layout-v2='true' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.236674' rowDisplayCount='200' show-hidden-fields='true' show-structure='true' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' _.fcp.SchemaViewerObjectModel.true...common-percentage='0.694184' _.fcp.SchemaViewerObjectModel.true...user-set-layout-v2='true' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.305816' rowDisplayCount='200' show-hidden-fields='true' show-structure='true' />
       <style>
         <style-rule element='mark'>
           <encoding attr='color' field='[:Measure Names]' palette='tableau10_10_0' type='palette'>
@@ -6754,6 +6757,9 @@
               <bucket>&quot;[federated.0vblg1004tss1s1e053n61qq9ny4].[pcto:cnt:TransactionID:qk:4]&quot;</bucket>
             </map>
             <map to='#e15759'>
+              <bucket>&quot;[federated.0vblg1004tss1s1e053n61qq9ny4].[pcto:cnt:TransactionID:qk:6]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
               <bucket>&quot;[federated.0vblg1004tss1s1e053n61qq9ny4].[pcto:sum:card5:qk:2]&quot;</bucket>
             </map>
             <map to='#e15759'>
@@ -6798,23 +6804,23 @@
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
       <datasource-dependencies datasource='Parameters'>
-        <column caption='M1-9' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;M2&quot;'>
-          <calculation class='tableau' formula='&quot;M2&quot;' />
+        <column caption='M1-9' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;M9&quot;'>
+          <calculation class='tableau' formula='&quot;M9&quot;' />
         </column>
         <column caption='Card4&amp;6' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Card6&quot;'>
           <calculation class='tableau' formula='&quot;Card6&quot;' />
         </column>
-        <column caption='Card1-3&amp;5' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Card5&quot;'>
-          <calculation class='tableau' formula='&quot;Card5&quot;' />
+        <column caption='Card1-3&amp;5' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Card1&quot;'>
+          <calculation class='tableau' formula='&quot;Card1&quot;' />
         </column>
-        <column caption='Addr' datatype='string' name='[Parameter 4]' param-domain-type='list' role='measure' type='nominal' value='&quot;Addr2&quot;'>
-          <calculation class='tableau' formula='&quot;Addr2&quot;' />
+        <column caption='Addr' datatype='string' name='[Parameter 4]' param-domain-type='list' role='measure' type='nominal' value='&quot;Addr1&quot;'>
+          <calculation class='tableau' formula='&quot;Addr1&quot;' />
         </column>
-        <column caption='C1-14' datatype='string' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;C1&quot;'>
-          <calculation class='tableau' formula='&quot;C1&quot;' />
+        <column caption='C1-14' datatype='string' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;C13&quot;'>
+          <calculation class='tableau' formula='&quot;C13&quot;' />
         </column>
-        <column caption='D1-15' datatype='string' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;D2&quot;'>
-          <calculation class='tableau' formula='&quot;D2&quot;' />
+        <column caption='D1-15' datatype='string' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;D15&quot;'>
+          <calculation class='tableau' formula='&quot;D15&quot;' />
         </column>
       </datasource-dependencies>
       <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
@@ -7317,8 +7323,8 @@
             <datasource name='Parameters' />
           </datasources>
           <datasource-dependencies datasource='Parameters'>
-            <column caption='Addr' datatype='string' name='[Parameter 4]' param-domain-type='list' role='measure' type='nominal' value='&quot;Addr2&quot;'>
-              <calculation class='tableau' formula='&quot;Addr2&quot;' />
+            <column caption='Addr' datatype='string' name='[Parameter 4]' param-domain-type='list' role='measure' type='nominal' value='&quot;Addr1&quot;'>
+              <calculation class='tableau' formula='&quot;Addr1&quot;' />
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='federated.0vblg1004tss1s1e053n61qq9ny4'>
@@ -7332,8 +7338,8 @@
             <column aggregation='Sum' caption='Is Fraud' datatype='integer' name='[isFraud]' role='dimension' type='ordinal' />
             <column-instance column='[Calculation_2905666215686635529]' derivation='None' name='[none:Calculation_2905666215686635529:ok]' pivot='key' type='ordinal' />
             <column-instance column='[isFraud]' derivation='None' name='[none:isFraud:ok]' pivot='key' type='ordinal' />
-            <column-instance column='[TransactionID]' derivation='Count' name='[pcto:cnt:TransactionID:qk:4]' pivot='key' type='quantitative'>
-              <table-calc ordering-field='[federated.0vblg1004tss1s1e053n61qq9ny4].[isFraud]' ordering-type='Field' type='PctTotal' />
+            <column-instance column='[TransactionID]' derivation='Count' name='[pcto:cnt:TransactionID:qk:6]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Table' type='PctTotal' />
             </column-instance>
           </datasource-dependencies>
           <shelf-sorts>
@@ -7356,8 +7362,7 @@
             </view>
             <mark class='Automatic' />
             <encodings>
-              <color column='[federated.0vblg1004tss1s1e053n61qq9ny4].[none:isFraud:ok]' />
-              <text column='[federated.0vblg1004tss1s1e053n61qq9ny4].[pcto:cnt:TransactionID:qk:4]' />
+              <text column='[federated.0vblg1004tss1s1e053n61qq9ny4].[pcto:cnt:TransactionID:qk:6]' />
             </encodings>
             <style>
               <style-rule element='mark'>
@@ -7384,8 +7389,8 @@
             <datasource name='Parameters' />
           </datasources>
           <datasource-dependencies datasource='Parameters'>
-            <column caption='C1-14' datatype='string' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;C1&quot;'>
-              <calculation class='tableau' formula='&quot;C1&quot;' />
+            <column caption='C1-14' datatype='string' name='[Parameter 5]' param-domain-type='list' role='measure' type='nominal' value='&quot;C13&quot;'>
+              <calculation class='tableau' formula='&quot;C13&quot;' />
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='federated.0vblg1004tss1s1e053n61qq9ny4'>
@@ -7467,8 +7472,8 @@
             <datasource name='Parameters' />
           </datasources>
           <datasource-dependencies datasource='Parameters'>
-            <column caption='Card1-3&amp;5' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Card5&quot;'>
-              <calculation class='tableau' formula='&quot;Card5&quot;' />
+            <column caption='Card1-3&amp;5' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;Card1&quot;'>
+              <calculation class='tableau' formula='&quot;Card1&quot;' />
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='federated.0vblg1004tss1s1e053n61qq9ny4'>
@@ -7646,8 +7651,8 @@
             <datasource name='Parameters' />
           </datasources>
           <datasource-dependencies datasource='Parameters'>
-            <column caption='D1-15' datatype='string' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;D2&quot;'>
-              <calculation class='tableau' formula='&quot;D2&quot;' />
+            <column caption='D1-15' datatype='string' name='[Parameter 6]' param-domain-type='list' role='measure' type='nominal' value='&quot;D15&quot;'>
+              <calculation class='tableau' formula='&quot;D15&quot;' />
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='federated.0vblg1004tss1s1e053n61qq9ny4'>
@@ -8279,8 +8284,8 @@
             <datasource name='Parameters' />
           </datasources>
           <datasource-dependencies datasource='Parameters'>
-            <column caption='M1-9' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;M2&quot;'>
-              <calculation class='tableau' formula='&quot;M2&quot;' />
+            <column caption='M1-9' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;M9&quot;'>
+              <calculation class='tableau' formula='&quot;M9&quot;' />
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='federated.0vblg1004tss1s1e053n61qq9ny4'>
@@ -9054,8 +9059,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1350' minheight='1350' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='49' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97650' id='48' param='vert' w='98848' x='576' y='1175'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='51' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='50' param='vert' w='84000' x='8000' y='8000'>
                 <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='13069' id='43' mode='checkdropdown' name='CntTrans' param='[federated.0vblg1004tss1s1e053n61qq9ny4].[none:isFraud:ok]' values='database' w='11519' x='87905' y='10867'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -9200,9 +9205,9 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='21' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97650' id='20' param='vert' w='98848' x='576' y='1175'>
-                <zone fixed-size='280' h='48752' id='11' is-fixed='true' name='ProdCD_Box' w='67243' x='576' y='1175'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='23' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97256' id='22' param='vert' w='98382' x='809' y='1372'>
+                <zone fixed-size='280' h='48555' id='11' is-fixed='true' name='ProdCD_Box' w='53994' x='809' y='1372'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -9211,7 +9216,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='65491' id='14' is-fixed='true' name='ProdCD_Cnt' w='31605' x='67819' y='33334'>
+                <zone fixed-size='280' h='59692' id='14' is-fixed='true' name='ProdCD_Cnt' w='44388' x='54803' y='38936'>
                   <layout-cache cell-count-w='5' minheight='184' non-cell-size-w='66' type-h='scalable' type-w='cell' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -9221,7 +9226,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' fixed-size='145' h='22467' id='15' name='ProdCD_Cnt' pane-specification-id='0' param='[federated.0vblg1004tss1s1e053n61qq9ny4].[none:ProductCD:nk]' w='31605' x='67819' y='10867'>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' fixed-size='145' h='26243' id='15' name='ProdCD_Cnt' pane-specification-id='0' param='[federated.0vblg1004tss1s1e053n61qq9ny4].[none:ProductCD:nk]' w='44388' x='54803' y='12693'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -9230,7 +9235,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='48898' id='12' is-fixed='true' name='ProdCD_Cnt2 ' w='67243' x='576' y='49927'>
+                <zone fixed-size='280' h='48701' id='12' is-fixed='true' name='ProdCD_Cnt2 ' w='53994' x='809' y='49927'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -9239,7 +9244,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='9692' id='13' name='ProdCD_Cnt2 ' pane-specification-id='0' param='[federated.0vblg1004tss1s1e053n61qq9ny4].[none:isFraud:ok]' w='31605' x='67819' y='1175'>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='11321' id='13' name='ProdCD_Cnt2 ' pane-specification-id='0' param='[federated.0vblg1004tss1s1e053n61qq9ny4].[none:isFraud:ok]' w='44388' x='54803' y='1372'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -9575,7 +9580,7 @@
       </cards>
       <simple-id uuid='{19E39CBF-C092-413F-A047-286B91CEB892}' />
     </window>
-    <window class='worksheet' name='Addr'>
+    <window class='worksheet' maximized='true' name='Addr'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -9597,7 +9602,6 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card pane-specification-id='0' param='[federated.0vblg1004tss1s1e053n61qq9ny4].[none:isFraud:ok]' type='color' />
             <card mode='compact' param='[Parameters].[Parameter 4]' type='parameter' />
           </strip>
         </edge>
@@ -9825,7 +9829,7 @@
       </cards>
       <simple-id uuid='{3C0B3993-6C49-426C-B84F-EF1A0E9DBF17}' />
     </window>
-    <window class='worksheet' maximized='true' name='D1-D15'>
+    <window class='worksheet' name='D1-D15'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -9897,7 +9901,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='3' />
+      <active id='-1' />
       <simple-id uuid='{AEE475F4-99B9-4D9A-95D5-4DBC7356F325}' />
     </window>
     <window class='dashboard' name='ProdCD'>
